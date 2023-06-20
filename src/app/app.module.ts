@@ -7,12 +7,8 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    StoreDevtoolsModule.instrument()
-  ],
+  imports: [BrowserModule, AppRoutingModule, StoreDevtoolsModule.instrument()],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
