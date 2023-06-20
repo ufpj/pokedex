@@ -1,5 +1,8 @@
 import { ApiService } from './api.service';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import {
+  HttpClientTestingModule,
+  HttpTestingController,
+} from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
 
 describe('ApiService', () => {
@@ -76,4 +79,3 @@ describe('ApiService', () => {
     request.flush(expectedResponse);
   });
 });
-
