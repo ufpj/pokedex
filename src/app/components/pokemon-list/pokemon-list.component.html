@@ -2,8 +2,8 @@
 <div *ngIf="error$ | async as error">{{ error }}</div>
 
 <div *ngIf="pokemons$ | async as pokemons">
-    <div *ngFor="let pokemon of pokemons">
-        <img src={{pokemon.imageUrl}} alt={{pokemon.name}}>
-        {{ pokemon.name }}
-    </div>
+  <div *ngFor="let pokemon of pokemons">
+    <img src="{{ pokemon.imageUrl }}" alt="{{ pokemon.name }}" />
+    {{ pokemon.name }}
+  </div>
 </div>

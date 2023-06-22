@@ -1,8 +1,8 @@
-import { EntityState } from "@ngrx/entity";
-import { Pokemon } from "src/app/models/pokemon.model";
+import { EntityState } from '@ngrx/entity';
+import { Pokemon } from 'src/app/models/pokemon.model';
 
 export interface PokemonState extends EntityState<Pokemon> {
-    loading: boolean;
-    error: string | null;
-    nextId: number;
+  loading: boolean;
+  error: string | null;
+  nextId: number;
 }

@@ -4,7 +4,7 @@ import { HomeComponent } from './home.component';
 import { PokemonListComponent } from '../../components/pokemon-list/pokemon-list.component';
 
 @NgModule({
-    declarations: [HomeComponent, PokemonListComponent],
-    imports: [CommonModule],
+  declarations: [HomeComponent, PokemonListComponent],
+  imports: [CommonModule],
 })
-export class HomeModule { }
+export class HomeModule {}

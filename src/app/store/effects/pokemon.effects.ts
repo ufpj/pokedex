@@ -5,25 +5,24 @@ import { of } from 'rxjs';
 import { ApiService } from '../../services/api.service';
 
 import {
-    loadPokemons,
-    loadPokemonsSuccess,
-    loadPokemonsFailure,
+  loadPokemons,
+  loadPokemonsSuccess,
+  loadPokemonsFailure,
 } from '../actions/pokemon.action';
-
 
 @Injectable()
 export class PokemonEffects {
-    constructor(private actions$: Actions, private apiService: ApiService) { }
+  constructor(private actions$: Actions, private apiService: ApiService) {}
 
-    loadPokemons$ = createEffect(() =>
-        this.actions$.pipe(
-            ofType(loadPokemons.start),
-            mergeMap(() =>
-                this.apiService.get<any>('pokemon').pipe(
-                    map((response) => loadPokemonsSuccess({ data: response })),
-                    catchError((error) => of(loadPokemonsFailure({ error })))
-                )
-            )
+  loadPokemons$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(loadPokemons.start),
+      mergeMap(() =>
+        this.apiService.get<any>('pokemon').pipe(
+          map((response) => loadPokemonsSuccess({ data: response })),
+          catchError((error) => of(loadPokemonsFailure({ error })))
         )
-    );
+      )
+    )
+  );
 }

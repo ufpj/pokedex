@@ -21,7 +21,7 @@ import { ApiService } from './services/api.service';
     StoreModule.forRoot({ pokemon: pokemonReducer }),
     EffectsModule.forRoot([PokemonEffects]),
     StoreDevtoolsModule.instrument(),
-    HomeModule
+    HomeModule,
   ],
   providers: [
     ApiService,
@@ -32,6 +32,6 @@ import { ApiService } from './services/api.service';
     },
   ],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppModule { }
+export class AppModule {}
