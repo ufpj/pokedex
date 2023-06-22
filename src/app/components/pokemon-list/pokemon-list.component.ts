@@ -33,4 +33,10 @@ export class PokemonListComponent implements OnInit {
   loadPokemons() {
     this.store.dispatch(loadPokemons.start());
   }
+
+  toggleFavorite(pokemon: Pokemon): void {}
+
+  addComment(pokemon: Pokemon): void {}
+
+  deleteComment(pokemon: Pokemon): void {}
 }
